@@ -1,7 +1,8 @@
-alert("Te invitamos a acceder a nuestro eccomerce.\n Tenemos una gran seleccion de productos.")
-const  producto = prompt("Elegi entre estos productos: \n - Samsung A32 $ 2335. \n - Samsung A52 $ 3559. \n - Samsung A72 $ 4199. \n Los precios no incluyen IVA. \n El envio esta incluido en el precio.")
+alert("Tambien los puedes llevar en 6 cuotas sin interes.");
+const  producto = prompt("Elegi entre estos productos: \n - Samsung A32 $ 2335. \n - Samsung A52 $ 3559. \n - Samsung A72 $ 4199. \n Los precios no incluyen IVA. \n El envio esta incluido en el precio.");
 const iva   = x => x * 0.21;
-const precioFinal = (celularPrecio, celularIva) => celularPrecio + celularIva
+const precioFinal = (celularPrecio, celularIva) => celularPrecio + celularIva;
+const cuotas = a => a / 6;
   
 while(producto != ""){
    switch (producto.toUpperCase()) {
@@ -9,10 +10,11 @@ while(producto != ""){
         case "SAMSUNG A32":
           let samsungA32 = 2335 
           let ivaA32 = iva(samsungA32)
+          let cuotaA32 = precioFinal(samsungA32, ivaA32)
           alert("el precio final de tu equipo es "+"$ "+ precioFinal(samsungA32, ivaA32))
-          const envioA32 = prompt("Te lo podemos enviar sin cargo, \n ¿Quieres que te lo enviemos o lo retiras del local?")
-          if(envioA32.toUpperCase() == "SI" || envioA32 == "quiero que me lo envien") {
-            alert("Muchas gracias por tu compra en 48hs estaremos despachando tu pedido. Saludos")
+          const cuotasA32 = prompt("Lo puedes pagar en 6 cuotas sin interes \n ¿Quieres pagarlo en cuotas o efectivo/debito")
+          if(cuotasA32.toUpperCase() == "EN CUOTAS" || cuotasA32 == "En 6 cuotas"|| cuotasA32 == "lo quiero en cuotas") {
+            alert("Bien, la cuota de tu equipo es de " +"$ "+ Math.ceil(cuotas(cuotaA32)))
             producto = ""
           } 
           else{
@@ -24,10 +26,11 @@ while(producto != ""){
           case "SAMSUNG A52":
           let samsungA52 = 3559 
           let ivaA52 = iva(samsungA52)
+          let cuotaA52 = precioFinal(samsungA52, ivaA52)
           alert("el precio final de tu equipo es "+"$ "+ precioFinal(samsungA52, ivaA52))
-          const envioA52 = prompt("Te lo podemos enviar sin cargo, \n ¿Quieres que te lo enviemos o lo retiras del local?")
-          if(envioA52.toUpperCase() == "SI" || envioA52 == "quiero que me lo envien") {
-            alert("Muchas gracias por tu compra en 48hs estaremos despachando tu pedido. Saludos")
+          const cuotasA52 = prompt("Lo puedes pagar en 6 cuotas sin interes \n ¿Quieres pagarlo en cuotas o efectivo/debito")
+          if(cuotasA52.toUpperCase() == "EN CUOTAS" || cuotasA52 == "En 6 cuotas"|| cuotasA52 == "lo quiero en cuotas") {
+            alert("Bien, la cuota de tu equipo es de " +"$ "+ Math.ceil(cuotas(cuotaA52)))
             producto = ""
           } 
           else{
@@ -39,10 +42,11 @@ while(producto != ""){
           case "SAMSUNG A72":
           let samsungA72 = 4199 
           let ivaA72 = iva(samsungA72)
+          let cuotaA72 = precioFinal(samsungA72, ivaA72)
           alert("el precio final de tu equipo es "+"$ "+ precioFinal(samsungA72, ivaA72))
-          const envioA72 = prompt("Te lo podemos enviar sin cargo, \n ¿Quieres que te lo enviemos o lo retiras del local?")
-          if(envioA72.toUpperCase() == "SI" || envioA72 == "quiero que me lo envien") {
-            alert("Muchas gracias por tu compra en 48hs estaremos despachando tu pedido. Saludos")
+          const cuotasA72 = prompt("Lo puedes pagar en 6 cuotas sin interes \n ¿Quieres pagarlo en cuotas o efectivo/debito")
+          if(cuotasA72.toUpperCase() == "EN CUOTAS" || cuotasA72 == "En 6 cuotas"|| cuotasA72 == "lo quiero en cuotas") {
+            alert("Bien, la cuota de tu equipo es de " +"$ "+ Math.ceil(cuotas(cuotaA72)))
             producto = ""
           } 
           else{
