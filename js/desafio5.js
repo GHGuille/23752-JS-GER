@@ -17,7 +17,7 @@ const samsungA52 = new Celular ("Samsung A52","256GB","6GB", 3559, 10)
 const samsungA72 = new Celular ("Samsung A72","256GB","8GB", 4119, 20)
 
 alert("Te invitamos a acceder a nuestro eccomerce.\n Tenemos una gran seleccion de productos.")
-const  producto = prompt(`Elegi entre estos productos para saber su precio: \n 1 - Samsung A32. \n 2 - Samsung A52. \n 3 - Samsung A72.`)
+let producto = prompt(`Elegi entre estos productos para saber su precio: \n 1 - Samsung A32. \n 2 - Samsung A52. \n 3 - Samsung A72.`)
 while(producto != ""){
    switch (producto.toUpperCase()) {
         case "1":

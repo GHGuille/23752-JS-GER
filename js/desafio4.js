@@ -1,5 +1,5 @@
 alert("Te invitamos a acceder a nuestro eccomerce.\n Tenemos una gran seleccion de productos.")
-const  producto = prompt("Elegi entre estos productos: \n 1 - Samsung A32 $ 2335. \n 2 - Samsung A52 $ 3559. \n 3 - Samsung A72 $ 4199. \n Los precios no incluyen IVA. \n El envio esta incluido en el precio.")
+let producto = prompt("Elegi entre estos productos: \n 1 - Samsung A32 $ 2335. \n 2 - Samsung A52 $ 3559. \n 3 - Samsung A72 $ 4199. \n Los precios no incluyen IVA. \n El envio esta incluido en el precio.")
 const iva   = x => x * 0.21;
 const precioFinal = (celularPrecio, celularIva) => celularPrecio + celularIva
 while(producto != ""){
