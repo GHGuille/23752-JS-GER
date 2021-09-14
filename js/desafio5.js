@@ -8,7 +8,7 @@ class Celular{
 	}
 	precioFinal(){
 		let preciof = `El precio final de ${this.modelo} es de ${this.precio*1.21}`
-		alert(preciof)
+		return preciof
 	}
 
 }
