@@ -1,3 +1,4 @@
+
 class Celular{
    	constructor(modelo, memoria, ram, precio, stock) {
         this.modelo = modelo;
